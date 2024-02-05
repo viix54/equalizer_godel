@@ -1,0 +1,9 @@
+.gridEq{
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(6,50px);
+    grid-template-rows: repeat(6,50px);
+}
+.grideq_item{
+    border: 1px solid black;
+}
