@@ -11,3 +11,14 @@
 .song_controller{
     display: none;
 }
+#waveform {
+    display: flex;
+    height: 100px;
+    overflow: hidden;
+}
+
+.bar {
+    width: 2px;
+    margin-right: 1px;
+    background-color: blue;
+}

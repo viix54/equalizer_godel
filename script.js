@@ -6,8 +6,24 @@ let reader = new FileReader();
 
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
 reader.addEventListener('load',(e)=>{
-    audioContext.decodeAudioData(e.target.result,(buffer)=> console.log(buffer.getChannelData(0)))
+    audioContext.decodeAudioData(e.target.result,(buffer)=> drawWaveForm(buffer.getChannelData(0)))
 })
+
+function drawWaveForm(data){
+    const waveformContainer = document.getElementById('waveform');
+        waveformContainer.innerHTML = '';
+
+    // for (let i = 0; i < data.length; i += 100) {
+    //     const amplitude = data[i];
+    //     const barHeight = (0.5 + amplitude * 0.5) * 100;
+
+    //     const bar = document.createElement('div');
+    //     bar.className = 'bar';
+    //     bar.style.height = barHeight + 'px';
+
+    //      waveformContainer.appendChild(bar);
+    // }
+}
 songPath.onchange = (e)=>{
     songController.style.display = 'block';
     let pathAddedFromUser = songPath.value.split('\\')[2];
