@@ -6,4 +6,8 @@
 }
 .grideq_item{
     border: 1px solid black;
+    color:white;
+}
+.song_controller{
+    display: none;
 }
